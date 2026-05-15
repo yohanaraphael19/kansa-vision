@@ -38,10 +38,11 @@ Upload scan → Denoising → Enhancement → Segmentation → BI-RADS Classific
 |---|---|
 | Denoising + enhancement | Bilateral filter + CLAHE (OpenCV) |
 | Lesion segmentation | MedSAM 2 |
-| BI-RADS classification + report | MedGemma 4B (`unsloth/medgemma-4b-it`) |
+| BI-RADS classification + report | MedGemma 4B via HuggingFace Spaces API |
 
-All model weights are cached locally. No runtime calls to external APIs —
-the system is designed to run offline.
+Segmentation weights are cached locally. BI-RADS classification is handled 
+by a MedGemma 4B instance hosted on HuggingFace Spaces — requires an active 
+Space and API access.
 
 ---
 
